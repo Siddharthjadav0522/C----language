@@ -1,46 +1,32 @@
-#include<stdio.h>>
+#include<stdio.h>
 int main(){
-    int a,b,c,d;
-    printf("enter a,b,c,d :");
-    scanf("%d %d %d %d",&a,&b,&c,&d);
+    int a[20][20],i,j,m,n,sum=0;   // average array
+    float avr;
 
-    // nested if else use of four velue in maximum
-    if (a>b){
-        if(a>c){
-            if(a>d){
-                printf("a is max");
-            }
-            else{
-                printf("d is max");
-            }
-        }
-        else{
-            if(c>d){
-                printf("c is max");
-            }
-            else{
-                printf("d is max");
-            }
-        }
-    }
-    else{ 
-         if(b>c){
-            if(b>d){
-                printf("b is max");
-            }
-            else{
-                printf("d is max");
-            }
-        }
-        else{
-             if(c>d){
-                printf("c is max");
+    printf("enter size of row and colum array :");
+    scanf("%d %d",&m ,&n);
 
-            }else{
-                printf("d is max");
-            }
-        }  
+    printf("enter array : \n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
+        }
+        
     }
     
-       return 0;
+     printf("2d array matrix ::\n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            sum= sum + a[i][j];
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+        //average find
+        avr=(float)sum/(m*n);
+        printf("all sum element %d \n",sum);
+        printf("all element average %.2f",avr);
+
+
+    return 0;
 }

@@ -1,27 +1,28 @@
-#include<stdio.h>>
+#include<stdio.h>
 int main(){
-    int a,b,c;
-    printf("enter a,b,c");
-    scanf("%d %d %d",&a,&b,&c);
+    int a[20][20],i,j,m,n,count=0;      //count array
 
-    // nested if else use of three velue in maximum
+    printf("enter size of row and colum array :");
+    scanf("%d %d",&m ,&n);
 
-    if (a<b){
-            if(a<c){
-            printf("a is max");
+    printf("enter array :");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
         }
-            else{
-            printf("c is max");
-        }
+        
     }
-    else{
-            if(b<c){
-            printf("b is max");
+    
+     printf("2d array matrix ::\n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            count++;
+            printf("%d ",a[i][j]);
         }
-            else{
-            printf("c is max");
-        }
-           
-    }    
+        printf("\n");
+    }
+
+        printf("%d ",count);
+
     return 0;
 }

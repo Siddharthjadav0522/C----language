@@ -1,87 +1,27 @@
-#include<stdio.h>>
+#include<stdio.h>
 int main(){
-    int a,b,c,d,e;
-    printf("enter a,b,c,d,e");
-    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    int a[20][20],i,j,m,n,sum=0;   //addition  array
 
-    // nested if else use of five velue in minimum
+    printf("enter size of row and colum array :");
+    scanf("%d %d",&m ,&n);
 
-    if (a<b){
-        if (a<c){
-            if (a<d){
-                if (a<e){
-                    printf("a is min");
-                }
-                else{
-                    printf("e is min");
-                }
-            }
-            else{
-                if(d<e){
-                    printf("d is min");
-                }
-                else{
-                    printf("e is min");
-                }
-            }   
+    printf("enter array : \n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
         }
-        else{
-            if(c<d){
-                if(c<e){
-                    printf("c is min");
-                }
-                else{
-                    printf("e is min");               
-                } 
-            }   
-            else{
-                if(d<e){
-                    printf("d is min");
-                }
-                else{
-                    printf("e is min");
-                }
-            }
-        } 
     }
     
-    else{
-        if(b<c){  
-            if (b<d){ 
-                if (b<e){
-                    printf("b is min");                
-                }
-                 else{
-                    printf("e is min");
-                 }
-            } 
-            else{
-                if(d<e){
-                    printf("d is min");                
-                }
-                 else{
-                    printf("e is min");
-                 }
-            } 
+     printf("2d array matrix ::\n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            sum= sum + a[i][j];
+            printf("%d ",a[i][j]);
         }
-        else{
-            if(c<d){
-                if(c<e){
-                    printf("c is min");
-                }
-                else{
-                    printf("e is min");               
-                } 
-            }   
-            else{
-                if(d<e){
-                    printf("d is min");
-                }
-                else{
-                    printf("e is min");
-                }
-            }
-        } 
+        printf("\n");
     }
+        //addition find array
+        printf("all sum element %d \n",sum);
+       
     return 0;
 }

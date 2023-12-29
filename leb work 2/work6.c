@@ -1,14 +1,35 @@
 #include<stdio.h>
 int main(){
-    int a,b,c,d;
-    printf("enter a&b&c&d :");
-    scanf("%d %d %d %d",&a,&b,&c,&d);
+    int a[20][20],i,j,m,n,sum=0;   //coulmn wise sum  array 
 
-    //ternary oerator using maxmum four velue
-    (a>b)?(a>c)?(a>d)?printf("a is max"):printf("d is max"):
-    (c>d)?printf("c is max"):printf("d is max"):
-    (b>c)?(b>d)?printf("b is max"):printf("d is max"):
-    (c>d)?printf("c is max"):printf("d is max");
+    printf("enter size of row and colum array :");
+    scanf("%d %d",&m ,&n);
 
+    printf("enter array : \n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+     printf("2d array matrix ::\n");
+
+    for ( i = 0; i < m; i++){
+        sum=0;
+        for ( j = 0; j < n; j++){
+            sum= sum + a[j][i];
+        }
+        //coulmn wise sum array
+        printf("all sum element %d \n",sum);
+
+    }
+        
+       
     return 0;
 }

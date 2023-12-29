@@ -1,21 +1,30 @@
 #include<stdio.h>
 int main(){
-    int a,b,c,d,e;
-    printf("enter a&b&c&d&e :");
-    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    int a[20][20],i,j,m,n,sum=0;   //diagonal sum of array
 
-    //ternary oerator using maxmum five velue
+    printf("enter size of row and colum array :");
+    scanf("%d %d",&m ,&n);
 
-
-    (a>b)?(a>c)?(a>d)?(a>e)?printf("a is max"):printf("e is max"):
-    (d>e)?printf("d is max"):printf("e is max"):
-    (c>d)?(c>e)?printf("c is max"):printf("e is max"):
-    (d>e)?printf("d is max"):printf("e is max"):
+    printf("enter array : \n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
     
-    (b>c)?(b>d)?(b>e)?printf("b is max"):printf("e is max"):
-    (d>e)?printf("d is max"):printf("e is max"):
-    (c>d)?(c>e)?printf("c is max"):printf("e is max"):
-    (d>e)?printf("d is max"):printf("e is max");
-
+     printf("2d array matrix ::\n");
+    for ( i = 0; i < m; i++){
+        for ( j = 0; j < n; j++){
+           if (i==j){
+             sum= sum + a[i][j];
+           }
+           
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+        //diagonal sum of array
+        printf("diagonal sum element %d \n",sum);
+       
     return 0;
 }
